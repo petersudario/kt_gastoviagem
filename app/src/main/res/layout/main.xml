@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:orientation="vertical">
-
-
+    >
 
     <EditText
+
         android:id="@+id/edit_distance"
+        android:minHeight="48dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:hint="@string/distance"
         android:inputType="numberDecimal" />
-    
+
     <TextView
         android:id="@+id/text_total_km"
-        android:layout_width="match_parent"
+        android:layout_below="@id/edit_distance"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/total_km"
-        android:gravity="center"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/total_km" />
 
     <EditText
         android:id="@+id/edit_price"
+        android:layout_below="@id/text_total_km"
+        android:minHeight="48dp"
         android:layout_marginTop="32dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,13 +38,16 @@
 
     <TextView
         android:id="@+id/text_price_liter"
-        android:layout_width="match_parent"
+        android:layout_below="@id/edit_price"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/price_liter"
-        android:gravity="center"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/price_liter" />
 
     <EditText
         android:id="@+id/edit_autonomy"
+        android:layout_below="@id/text_price_liter"
+        android:minHeight="48dp"
         android:layout_marginTop="32dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,31 +57,35 @@
 
     <TextView
         android:id="@+id/text_autonomy_km"
-        android:layout_width="match_parent"
+        android:layout_below="@id/edit_autonomy"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/autonomy_km"
-        android:gravity="center"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/autonomy_km" />
 
     <TextView
         android:id="@+id/text_total_spent"
-        android:layout_width="match_parent"
+        android:layout_below="@id/text_autonomy_km"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_centerHorizontal="true"
         android:textSize="16sp"
         android:layout_marginTop="32dp"
         android:text="@string/total_spent"/>
 
     <TextView
         android:id="@+id/text_total_spent_value"
-        android:layout_width="match_parent"
+        android:layout_below="@id/text_total_spent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_centerHorizontal="true"
         android:textSize="38sp"
         android:text="@string/total_spent_value"
         />
 
     <Button
         android:id="@+id/button_calculate"
+        android:layout_below="@id/text_total_spent_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/calculate"
@@ -86,4 +96,4 @@
         />
 
 
-</LinearLayout>
+</RelativeLayout>
